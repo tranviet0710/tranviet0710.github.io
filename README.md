@@ -1,2 +1,3 @@
-# portfolio_site
+## portfolio_site
 Buiding portfolio using HTML, SCSS, JAVASCRIPT ...
+
