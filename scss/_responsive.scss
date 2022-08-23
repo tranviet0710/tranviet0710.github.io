@@ -39,14 +39,7 @@
     .contact__list{
         grid-template-columns: repeat(2, 1fr);
     }
-    .social-icons{
-        display: flex;
-        flex-direction: column;
-    }
-    footer{
-        transform: 
-            rotate(90deg) translate(-5rem, -6rem);
-    }
+    
 }
 
 
@@ -74,5 +67,16 @@
     }
     .contact__list{
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@include media-phone{
+    .social-icons{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        transform: 
+            rotate(90deg) translate(-5rem, -6rem);
     }
 }

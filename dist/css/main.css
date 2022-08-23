@@ -336,13 +336,6 @@
   .contact__list {
     grid-template-columns: repeat(2, 1fr);
   }
-  .social-icons {
-    display: flex;
-    flex-direction: column;
-  }
-  footer {
-    transform: rotate(90deg) translate(-5rem, -6rem);
-  }
 }
 @media screen and (min-width: 1024px) {
   .projects__items {
@@ -361,6 +354,15 @@
   }
   .contact__list {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 300px) {
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    transform: rotate(90deg) translate(-5rem, -6rem);
   }
 }
 body {

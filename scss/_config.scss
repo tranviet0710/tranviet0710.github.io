@@ -33,3 +33,8 @@
         @content;
     }
 }
+@mixin media-phone {
+    @media screen and (min-width: 300px) {
+        @content;
+    }
+}
