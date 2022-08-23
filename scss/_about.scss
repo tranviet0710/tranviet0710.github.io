@@ -41,12 +41,19 @@
             border-bottom: 5px solid $secondary-color;
         }
 
-        h2,h3{
+        h2, h3{
             margin: 0.5rem 0;
         }
-        h6{
+        h5{
             margin: 0.3rem 0;
         }
+        ul{
+            list-style-type: none;
+            li{
+                padding: 3px 15px;
+            }
+        }
+        
     }
     .social-icons{
         // transform: 
@@ -58,4 +65,5 @@
         transform: 
             rotate(90deg) translate(-5rem, -6rem);
     }
+    
 }

@@ -8,8 +8,8 @@
     background: 
         linear-gradient(
             to right,
-            rgba($primary-color, 0.8),
-            rgba($primary-color, 0.3)
+            rgba($primary-color, 0.9),
+            rgba($primary-color, 0.5)
         ),
         url('../img/contact.png') center;
     background-size: cover;
@@ -17,6 +17,7 @@
     h2{
         font-size: 2rem;
         margin-bottom: 2rem;
+        text-transform: uppercase;
     }
     &__list{
         display: grid;
@@ -27,5 +28,8 @@
     .social-icons{
         position: initial;
         margin-top: 2rem;
+    }
+    .text-secondary{
+        margin-top: 5px;
     }
 }
