@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'config';
 @import 'home';
+@import 'menu';
 body{
     background: $primary-color;
     color: set-text-color($primary-color);
@@ -15,6 +16,11 @@ a{
     color:  set-text-color($primary-color);
     text-decoration: none;
 }
+
+.text-secondary{
+    color: $secondary-color;
+}
+
 header{
     position: fixed;
     z-index: 2;
