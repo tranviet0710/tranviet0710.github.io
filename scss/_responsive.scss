@@ -1,15 +1,15 @@
-@include media-phone{
-    .home {
-        .social-icons{
-            display: flex;
-            flex-direction: column;
-        }
-        footer{
-            transform: 
-                rotate(90deg) translate(-5rem, -6rem);
-        }
-    }
-}
+// @include media-phone{
+//     .home {
+//         .social-icons{
+//             display: flex;
+//             flex-direction: column;
+//         }
+//         footer{
+//             transform: 
+//                 rotate(90deg) translate(-5rem, -6rem);
+//         }
+//     }
+// }
 
 @include media-md{
     .menu-btn{
