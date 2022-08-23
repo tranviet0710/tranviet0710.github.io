@@ -17,7 +17,11 @@
         @return #fff;
     }
 }
-
+@mixin media-phone {
+    @media screen and (min-width: 300px) {
+        @content;
+    }
+}
 @mixin media-md {
     @media screen and (min-width: 768px) {
         @content;
@@ -30,11 +34,6 @@
 }
 @mixin media-xl {
     @media screen and (min-width: 1600px) {
-        @content;
-    }
-}
-@mixin media-phone {
-    @media screen and (min-width: 300px) {
         @content;
     }
 }

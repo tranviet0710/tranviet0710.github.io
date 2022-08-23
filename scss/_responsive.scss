@@ -1,3 +1,16 @@
+@include media-phone{
+    .home {
+        .social-icons{
+            display: flex;
+            flex-direction: column;
+        }
+        footer{
+            transform: 
+                rotate(90deg) translate(-5rem, -6rem);
+        }
+    }
+}
+
 @include media-md{
     .menu-btn{
         visibility: hidden;
@@ -20,11 +33,9 @@
             }
         }
     }
-
     .about__bio{
         font-size: 1.5rem;
     }
-
     .projects{
         &__bio-image{
             height: 40vh;
@@ -39,10 +50,7 @@
     .contact__list{
         grid-template-columns: repeat(2, 1fr);
     }
-    
 }
-
-
 
 @include media-lg{
     .projects{
@@ -70,13 +78,3 @@
     }
 }
 
-@include media-phone{
-    .social-icons{
-        display: flex;
-        flex-direction: column;
-    }
-    footer{
-        transform: 
-            rotate(90deg) translate(-5rem, -6rem);
-    }
-}
