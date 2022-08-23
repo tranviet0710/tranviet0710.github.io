@@ -336,6 +336,13 @@
   .contact__list {
     grid-template-columns: repeat(2, 1fr);
   }
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+  footer {
+    transform: rotate(90deg) translate(-5rem, -6rem);
+  }
 }
 @media screen and (min-width: 1024px) {
   .projects__items {
