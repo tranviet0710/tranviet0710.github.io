@@ -1,9 +1,9 @@
 @import 'variables';
-@import 'reset';
+@import 'config';
 @import 'home';
 body{
     background: $primary-color;
-    color: $text-color;
+    color: set-text-color($primary-color);
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1;
@@ -12,7 +12,7 @@ h1, h2,h3{
     font-weight: 400;
 }
 a{
-    color: $text-color;
+    color:  set-text-color($primary-color);
     text-decoration: none;
 }
 header{
@@ -32,7 +32,7 @@ main{
 
         a{
             padding: 0.4rem;
-            
+            @include transition-ease;
             &:hover{
                 color: $hover-color;
             }
@@ -46,5 +46,6 @@ footer{
     text-align: right;
     right: 1rem;
     padding: 1rem;
-    color: #fff;
+    color: set-text-color($primary-color);
 }
+
