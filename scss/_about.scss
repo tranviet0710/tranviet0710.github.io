@@ -18,6 +18,7 @@
         justify-content: flex-end;
         p{
             margin-bottom: 2rem;
+            font-size: 1rem;
         }
     }
     &__bio{
@@ -56,14 +57,14 @@
         
     }
     .social-icons{
-        // transform: 
-        //  translate(-5rem, -5rem);
+        font-size: 10px;
         display: flex;
         flex-direction: column;
     }
     footer{
-        transform: 
-            rotate(90deg) translate(-5rem, -6rem);
+        font-size: 0.8rem;
+            transform: 
+                rotate(90deg) translate(-4rem, -5rem);
     }
     
 }

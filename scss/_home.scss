@@ -20,15 +20,6 @@
         margin-bottom: 1rem;
         position: relative;
         border-bottom: 2px solid set-text-color($primary-color);
-        // &:after{
-        //     content: '';
-        //     background: #fff;
-        //     position: absolute;
-        //     bottom: 0;
-        //     left: 0;
-        //     height: 1px;
-        //     width: 40%;
-        // }
         &--last{
             color: $secondary-color;
             font-weight: 700;
