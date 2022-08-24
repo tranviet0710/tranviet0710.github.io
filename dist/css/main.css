@@ -13,6 +13,9 @@
   background: linear-gradient(to right, rgba(39, 39, 39, 0.8), rgba(39, 39, 39, 0.3)), url("../img/model.jpg") center bottom;
   background-size: cover;
 }
+.home__greeting {
+  width: 40%;
+}
 .home__name {
   font-size: 5rem;
   padding-bottom: 1rem;
@@ -23,6 +26,11 @@
 .home__name--last {
   color: #ff652f;
   font-weight: 700;
+}
+.home .centered__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu-btn {

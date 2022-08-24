@@ -13,6 +13,9 @@
         url('../img/model.jpg') center bottom;
     background-size: cover;
 
+    &__greeting{
+        width: 40%;
+    }
 
     &__name{
         font-size: 5rem;
@@ -24,5 +27,10 @@
             color: $secondary-color;
             font-weight: 700;
         }
+    }
+    .centered__box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
