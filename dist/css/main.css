@@ -185,6 +185,9 @@
 .about .jobs__job .link {
   color: lightblue;
 }
+.about .jobs__job p {
+  margin: 1rem 0;
+}
 .about .jobs h2, .about .jobs h3 {
   margin: 0.5rem 0;
 }
