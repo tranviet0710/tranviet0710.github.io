@@ -8,6 +8,120 @@
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="icon" type="image/x-icon" href="../img/favicon.png">
     <title>Contact - VietDev</title>
+    <style>
+        /* Enhanced contact page styling */
+        .contact {
+            background-attachment: fixed;
+        }
+
+        .contact__header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .contact__header h1 {
+            font-size: 3rem;
+            color: #ff652f;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            animation: fadeInDown 1s ease;
+        }
+
+        .contact__header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .contact__list {
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .contact__list>div {
+            border-left: 4px solid #ff652f;
+            transition: all 0.3s ease;
+        }
+
+        .contact__list>div:hover {
+            background: rgba(80, 80, 80, 0.9);
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        .text-secondary {
+            color: #ff652f;
+            font-weight: bold;
+        }
+
+        .social-icons {
+            margin-top: 3rem;
+        }
+
+        .social-icons a {
+            margin: 0 1rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-10px);
+        }
+
+        .social-icons a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #ff652f;
+            bottom: -5px;
+            left: 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover::after {
+            transform: scaleX(1);
+        }
+
+        footer {
+            margin-top: 2rem;
+            padding: 1rem;
+            font-style: italic;
+        }
+
+        @media screen and (max-width: 768px) {
+            .contact__header h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact__list {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -35,7 +149,12 @@
 
     <main>
         <section class="contact">
-            <div class="contact__list home__name">
+            <div class="contact__header">
+                <h1>Get In Touch</h1>
+                <p>I'm currently available for freelance work and full-time positions.
+                    Feel free to reach out if you have a project or opportunity in mind!</p>
+            </div>
+            <div class="contact__list">
                 <div class="contact__email">
                     <i class="fas fa-envelope"></i> Email
                     <div class="text-secondary">trancongviet0710@gmail.com</div>
@@ -50,27 +169,28 @@
                 </div>
                 <div class="contact__address">
                     <i class="fas fa-map-marker-alt"></i> Address
-                    <div class="text-secondary">Lien Chieu District, Da Nang City</div>
+                    <div class="text-secondary">Da Nang City</div>
                 </div>
             </div>
+
             <div class="social-icons">
-                <a href="https://twitter.com/TrnCngVit2" target="_blank">
+                <a href="https://twitter.com/TrnCngVit2" target="_blank" aria-label="Twitter">
                     <i class="fab fa-twitter fa-2x"></i>
                 </a>
-                <a href="https://www.facebook.com/tranviet0710/" target="_blank">
+                <a href="https://www.facebook.com/tranviet0710/" target="_blank" aria-label="Facebook">
                     <i class="fab fa-facebook fa-2x"></i>
                 </a>
-                <a href="https://www.instagram.com/tranviet._.0710/" target="_blank">
+                <a href="https://www.instagram.com/tranviet._.0710/" target="_blank" aria-label="Instagram">
                     <i class="fab fa-instagram fa-2x"></i>
                 </a>
-                <a href="https://github.com/tranviet0710" target="_blank">
+                <a href="https://github.com/tranviet0710" target="_blank" aria-label="GitHub">
                     <i class="fab fa-github fa-2x"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/tranviet0710/" target="_blank">
+                <a href="https://www.linkedin.com/in/tranviet0710/" target="_blank" aria-label="LinkedIn">
                     <i class="fab fa-linkedin fa-2x"></i>
                 </a>
             </div>
-            <footer>&copy; Copyright VietDev 2025</footer>
+            <footer>&copy; 2024 Viet Tran | Software Engineer</footer>
         </section>
     </main>
 </body>
