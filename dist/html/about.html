@@ -1,214 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="icon" type="image/x-icon" href="../img/favicon.png" />
-    <title>About - VietDev</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="menu-btn">
-        <div class="menu-btn__burger"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="icon" type="image/x-icon" href="../img/favicon.png" />
+  <title>About - VietDev</title>
+  <style>
+    /* Enhanced styling for better employer appeal */
+    .menu-nav__link:hover {
+      color: #ff652f;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .jobs__job {
+      transition: transform 0.3s ease;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 2rem;
+    }
+
+    .jobs__job:hover {
+      transform: translateY(-5px);
+    }
+
+    .jobs__job img {
+      max-width: 180px;
+      height: auto;
+      margin: 15px 0;
+      border-radius: 5px;
+      display: block;
+    }
+
+    .jobs__job h2,
+    .jobs__job h3,
+    .jobs__job h5 {
+      margin-bottom: 8px;
+    }
+
+    .bio-header {
+      text-align: center;
+      padding: 20px 0;
+      margin-bottom: 20px;
+    }
+
+    .bio-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #ff652f;
+    }
+
+    .bio-header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .skills-section {
+      background: #333;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 10px;
+    }
+
+    .skill-tag {
+      background: #ff652f;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="menu-btn">
+      <div class="menu-btn__burger"></div>
+    </div>
+    <nav class="nav">
+      <ul class="menu-nav">
+        <li class="menu-nav__item">
+          <a href="../../index.html" class="menu-nav__link">Home</a>
+        </li>
+        <li class="menu-nav__item active">
+          <a href="about.html" class="menu-nav__link">About</a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="projects.html" class="menu-nav__link">My Projects</a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="contact.html" class="menu-nav__link">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about">
+      <div class="about__bio-image">
+        <div class="about__bio">
+          <h2 class="text-secondary">SOFTWARE ENGINEER</h2>
+        </div>
       </div>
-      <nav class="nav">
-        <ul class="menu-nav">
-          <li class="menu-nav__item">
-            <a href="../../index.html" class="menu-nav__link">Home</a>
-          </li>
-          <li class="menu-nav__item active">
-            <a href="about.html" class="menu-nav__link">About</a>
-          </li>
-          <li class="menu-nav__item">
-            <a href="projects.html" class="menu-nav__link">My Projects</a>
-          </li>
-          <li class="menu-nav__item">
-            <a href="contact.html" class="menu-nav__link">Contact Me</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <div class="jobs">
+        <div class="bio-header">
+          <h1>Viet Tran</h1>
+          <p>A passionate Software Engineer with 4+ years of experience building modern web applications with Spring
+            Boot and React. Committed to clean code, continuous learning, and delivering exceptional user experiences.
+          </p>
+        </div>
 
-    <main>
-      <section class="about">
-        <div class="about__bio-image">
-          <div class="about__bio">
-            <!-- <h2 class="text-secondary">BIO</h2> -->
+        <div class="skills-section">
+          <h3 class="text-secondary">Technical Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-tag">Java</div>
+            <div class="skill-tag">Spring Boot</div>
+            <div class="skill-tag">ReactJS</div>
+            <div class="skill-tag">JavaScript</div>
+            <div class="skill-tag">Typescript</div>
+            <div class="skill-tag">HTML5/CSS3</div>
+            <div class="skill-tag">VueJS</div>
+            <div class="skill-tag">Django</div>
+            <div class="skill-tag">MySQL</div>
+            <div class="skill-tag">SQL Server</div>
+            <div class="skill-tag">PostgreSQL</div>
+            <div class="skill-tag">MongoDB</div>
+            <div class="skill-tag">Git</div>
+            <div class="skill-tag">REST APIs</div>
+            <div class="skill-tag">JPA/Hibernate</div>
+            <div class="skill-tag">Bootstrap</div>
+            <div class="skill-tag">TailwindCSS</div>
+            <div class="skill-tag">Figma</div>
+            <div class="skill-tag">Jest</div>
+            <div class="skill-tag">Jasmine</div>
+            <div class="skill-tag">Selenium</div>
+            <div class="skill-tag">Docker</div>
+            <div class="skill-tag">Kubernetes</div>
+            <div class="skill-tag">AWS</div>
+            <div class="skill-tag">GitLab</div>
+            <div class="skill-tag">Jenkins</div>
+            <div class="skill-tag">CI/CD</div>
+            <div class="skill-tag">Agile/Scrum</div>
+            <div class="skill-tag">Kanban</div>
+            <div class="skill-tag">JIRA</div>
+            <div class="skill-tag">Thymeleaf</div>
+            <div class="skill-tag">JUnit</div>
+            <div class="skill-tag">Maven</div>
+            <div class="skill-tag">Gradle</div>
+            <div class="skill-tag">NPM</div>
+            <div class="skill-tag">Yarn</div>
+            <div class="skill-tag">Webpack</div>
+            <div class="skill-tag">Babel</div>
+            <div class="skill-tag">ESLint</div>
           </div>
         </div>
-        <div class="jobs">
-          <p>Viet Tran 🙌 to everyone.</p>
-          <p>
-            Now I am a senior in IT Falcuty at Danang University of Science and
-            Technology. A fresher website developer specializing in backend
-            development. Hope to have a chance to collaborate with you in the
-            future ...
-          </p>
-          <div class="jobs__job">
-            <h2 class="text-secondary">9/2019 – NOW</h2>
-            <h3 class="job__company">
-              Danang University of Science and Technology
-            </h3>
-            <h5 class="job__position">IT-er</h5>
-            <ul>
-              <li>
-                Good self-management skills, highly organized and able to
-                prioritize.
-              </li>
-              <li>Excellent critical and breakthrough thinkings.</li>
-              <li>Able to focus in distracting enviroments.</li>
-              <li>
-                Intermediate to advanced knowledge of web technologies and
-                browsers.
-              </li>
-              <li>
-                Passion for technology and working knowledge of industry
-                landscape.
-              </li>
-              <li>
-                Learn and practice with projects based learning (PBLs)
-                <p>
-                  • Cinema Management Application (.NET) (3-5/2021) - UI/UX,
-                  Coding
-                </p>
-                <p>
-                  • Big-size File-Uploading Dynamic Web (Java, HTML, CSS)
-                  (11-12/2021) - Backend Coding
-                </p>
-                <p>
-                  • Smart conveyor belt – Conveyor Management Website (VueJs,
-                  Django) (3-5/2022) - Embedded coding, AI
-                </p>
-                <p>
-                  • Orphanage Management (Angular, Django, Flutter) (10-12/2022)
-                  - Mobile coding, Frontend and DevOps Supporter
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div class="jobs__job">
-            <h2 class="text-secondary">5/2021 – NOW</h2>
-            <h3 class="job__company">Java Course</h3>
-            <h5 class="job__position">Trainee</h5>
-            <ul>
-              <li>Git, Java Core, Database (MySQL), JDBC, JPA, Hibernate</li>
-              <li>HTML5, CSS3, Javascript, Jquery, Bootstrap5</li>
-              <li>Spring MVC, Spring Security, Spring Boot</li>
-            </ul>
-          </div>
-          <div class="jobs__job">
-            <h2 class="text-secondary">5/2022 – NOW</h2>
-            <h3 class="job__company">Freelancer</h3>
-            <h5 class="job__position">
-              Worked as a freelancer on lots of projects & various scopes of
-              technology
-            </h5>
-            <ul>
-              <li>
-                - Deliver some Python tools for crawling data and automating
-                actions.
-              </li>
-              <li>
-                - Deliver some simple websites, landing pages using HTML5, CSS3,
-                JS, Bootstrap5.
-              </li>
-              <li>
-                - Deliver and help build more functions for JSP Servlet, Spring
-                MVC website, Java Swing programs.
-              </li>
-            </ul>
-          </div>
-          <div class="jobs__job">
-            <h2 class="text-secondary">5/2022 – 9/2022</h2>
-            <h3 class="job__company">Paradox Company</h3>
-            <h5 class="job__position">Fullstack Developer Intern</h5>
-            <ul>
-              <li>
-                - Get know of languages/tools/frameworks being using in the
-                company projects.
-              </li>
-              <li>
-                - Learning Python, Django, VueJs fundamentals, get used to
-                Figma, Docker, Jira, Redmine, Confluence...
-              </li>
-              <li>
-                - Practice on ERP project, build my own Ecommerce Website using
-                Django and VueJs.
-              </li>
-            </ul>
-          </div>
-          <div class="jobs__job">
-            <h2 class="text-secondary">9/2022 – 12/2022</h2>
-            <h3 class="job__company">Paradox Company</h3>
-            <h5 class="job__position">Automation QA Freelancer</h5>
-            <ul>
-              <li>
-                - Implement test cases for components of Olivia System using
-                Python, Robot Framework, Selenium.
-              </li>
-              <li>- Get used to the workflow of an automation QA.</li>
-            </ul>
-          </div>
-          <div class="jobs__job">
-            <h2 class="text-secondary">EDUCATION</h2>
-            <ul>
-              <li>GPA: 3.44/4.0</li>
-              <li>TOEIC: 785+</li>
-            </ul>
-          </div>
-          <div class="jobs__job">
-            <h2 class="text-secondary">ACHIEVEMENTS</h2>
-            <ul>
-              <li>Excellent student for 12 years</li>
-              <li>English provincial competition consolation prize</li>
-              <li>High school A1, D1 valedictorian</li>
-              <li>DUT scholarship 2021</li>
-              <li>2nd, 3rd year excellent student certificate</li>
-              <li>
-                Google certificates in GCP Challenge 2022
-                <a
-                  href="https://www.cloudskillsboost.google/public_profiles/6bc44370-d024-4c1a-995c-8b62b06af34d"
-                  target="_blank"
-                  ><i class="fa-solid fa-link link"> </i
-                ></a>
-              </li>
-              <li>Successfully finished Paradox Summer Internship 2022</li>
-            </ul>
-          </div>
+        <div class="jobs__job">
+          <h2 class="text-secondary">7/2024 - PRESENT</h2>
+          <h3 class="job__company">Globant</h3>
+          <h5 class="job__position">Software Engineer</h5>
+          <p>Working on enterprise-level applications with modern technologies, focusing on scalable and maintainable
+            solutions.</p>
+          <img src="https://www.globant.com/themes/custom/globant_corp_theme/images/2019/globant-logo-dark.svg"
+            alt="Globant Logo" />
+        </div>
+        <div class="jobs__job">
+          <h2 class="text-secondary">2022 – 7/2024</h2>
+          <h3 class="job__company">FPT Software</h3>
+          <h5 class="job__position">FullStack Developer</h5>
+          <p>Developed and maintained web applications using Spring Boot and React, implementing RESTful APIs and
+            responsive UI components.</p>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/FPT_logo_2010.svg/1200px-FPT_logo_2010.svg.png"
+            alt="FPT Software Logo" />
+        </div>
+        <div class="jobs__job">
+          <h2 class="text-secondary">7/2021 – 12/2021</h2>
+          <h3 class="job__company">Paradox Vietnam</h3>
+          <h5 class="job__position">FullStack Developer</h5>
+          <img
+            src="https://mms.businesswire.com/media/20200511005657/en/689439/5/Paradox-CompanyLogo-Web-PrimaryHorizontal-RGB-TwoColor.jpg?download=1"
+            alt="Paradox Vietnam Logo" />
+        </div>
+        <div class="jobs__job">
+          <h2 class="text-secondary">9/2019 – 9/2023</h2>
+          <h3 class="job__company">Danang University of Science and Technology</h3>
+          <h5 class="job__position">IT-er</h5>
+          <ul>
+            <li>Good self-management skills, highly organized and able to prioritize.</li>
+            <li>Excellent critical and breakthrough thinking.</li>
+            <li>Intermediate to advanced knowledge of web technologies and browsers.</li>
+            <li>Learned and practiced with project-based learning (PBLs).</li>
+            <li><strong>Projects:</strong>
+              <ul>
+                <li>Cinema Management Application (.NET) - UI/UX, Coding.</li>
+                <li>Big-size File-Uploading Dynamic Web (Java, HTML, CSS) - Backend Coding.</li>
+                <li>Smart Conveyor Belt (VueJs, Django) - Embedded coding, AI.</li>
+                <li>Orphanage Management (Angular, Django, Flutter) - Mobile coding, Frontend, and DevOps Supporter.
+                </li>
+                <li>Elearning Website (ReactJs, SpringBoot, MySQL) - FullStack Developer.</li>
+              </ul>
+            </li>
+          </ul>
+          <img src="https://pbs.twimg.com/profile_images/1329268753385758720/cz6FVX5B_400x400.jpg"
+            alt="Danang University Logo" />
+        </div>
+        <div class="jobs__job">
+          <h2 class="text-secondary">5/2021 – 9/2022</h2>
+          <h3 class="job__company">BKIT13 - Java Web Developer Course</h3>
+          <h5 class="job__position">Trainee</h5>
+          <ul>
+            <li>Git, Java Core, Database (MySQL), JDBC, JPA, Hibernate.</li>
+            <li>HTML5, CSS3, JavaScript, Jquery, Bootstrap5.</li>
+            <li>Spring MVC, Spring Security, Spring Boot.</li>
+          </ul>
         </div>
         <div class="social-icons">
-          <a href="https://twitter.com/TrnCngVit2" target="_blank">
+          <a href="https://twitter.com/TrnCngVit2" target="_blank" aria-label="Twitter">
             <i class="fab fa-twitter fa-2x"></i>
           </a>
-          <a href="https://www.facebook.com/tranviet0710/" target="_blank">
+          <a href="https://www.facebook.com/tranviet0710/" target="_blank" aria-label="Facebook">
             <i class="fab fa-facebook fa-2x"></i>
           </a>
-          <a href="https://www.instagram.com/tranviet._.0710/" target="_blank">
+          <a href="https://www.instagram.com/tranviet._.0710/" target="_blank" aria-label="Instagram">
             <i class="fab fa-instagram fa-2x"></i>
           </a>
-          <a href="https://github.com/tranviet0710" target="_blank">
+          <a href="https://github.com/tranviet0710" target="_blank" aria-label="GitHub">
             <i class="fab fa-github fa-2x"></i>
           </a>
-          <a href="https://www.linkedin.com/in/tranviet0710/" target="_blank">
+          <a href="https://www.linkedin.com/in/tranviet0710/" target="_blank" aria-label="LinkedIn">
             <i class="fab fa-linkedin fa-2x"></i>
           </a>
         </div>
-        <footer>&copy; Copyright VietDev 2023</footer>
-      </section>
-    </main>
-  </body>
+        <footer>&copy; Copyright VietDev 2025</footer>
+      </div>
+    </section>
+  </main>
+  <script src="https://kit.fontawesome.com/231ad781b9.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="../js/main.js"></script>
+</body>
+
 </html>
-<!-- Add Font Awesome-->
-<script
-  src="https://kit.fontawesome.com/231ad781b9.js"
-  crossorigin="anonymous"
-></script>
-<script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"
-></script>
-<script src="../js/main.js"></script>
