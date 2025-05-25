@@ -86,6 +86,393 @@
       text-align: center;
       font-size: 0.9rem;
     }
+
+    /* Additional enhanced styling */
+    .about__bio-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about__bio-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, transparent 30%, rgba(39, 39, 39, 0.7) 100%);
+    }
+
+    .about__bio {
+      position: relative;
+      z-index: 2;
+      padding: 2rem;
+      background: rgba(39, 39, 39, 0.8);
+      border-radius: 10px;
+      backdrop-filter: blur(5px);
+      border-left: 4px solid #ff652f;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .skills-section {
+      animation: slideInRight 0.8s ease;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .skill-tag {
+      transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      background: #ff8f5e;
+    }
+
+    .skill-categories {
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .skill-category {
+      padding: 5px 15px;
+      border-radius: 20px;
+      background: #444;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .skill-category:hover,
+    .skill-category.active {
+      background: #ff652f;
+    }
+
+    .jobs__job {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .jobs__job::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: #ff652f;
+      transition: height 0.5s ease;
+    }
+
+    .jobs__job:hover::before {
+      height: 100%;
+    }
+
+    .timeline-connector {
+      position: absolute;
+      left: -30px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #ff652f;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -35px;
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ff652f;
+      border: 2px solid #272727;
+    }
+
+    .jobs {
+      position: relative;
+    }
+
+    .education-section {
+      margin-top: 3rem;
+      animation: fadeIn 1s ease;
+      animation-delay: 0.5s;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    .education-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .education-header h3 {
+      font-size: 2rem;
+      color: #ff652f;
+    }
+
+    /* Additional styling for enhanced elements */
+    .job-responsibilities {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      opacity: 0.7;
+    }
+
+    .job-responsibilities.show,
+    .jobs__job:hover .job-responsibilities {
+      max-height: 500px;
+      opacity: 1;
+    }
+
+    .job-responsibilities li {
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    .job-responsibilities li::before {
+      content: '•';
+      color: #ff652f;
+      font-weight: bold;
+      position: absolute;
+      left: -1rem;
+    }
+
+    .experience-header {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 2rem;
+      position: relative;
+    }
+
+    .experience-header::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: #ff652f;
+    }
+
+    .jobs__job {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .jobs__job.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #ff652f;
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      z-index: 100;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .scroll-top-btn.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-top-btn:hover {
+      background: #ff8f5e;
+    }
+
+    /* Responsive improvements */
+    @media screen and (max-width: 768px) {
+      .bio-header h1 {
+        font-size: 2rem;
+      }
+
+      .bio-header p {
+        font-size: 1rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      }
+
+      .skill-tag {
+        font-size: 0.8rem;
+      }
+
+      .skill-categories {
+        gap: 5px;
+      }
+
+      .skill-category {
+        padding: 4px 10px;
+        font-size: 0.8rem;
+      }
+
+      .jobs__job img {
+        max-width: 150px;
+      }
+
+      .timeline-dot {
+        left: -25px;
+      }
+
+      .timeline-connector {
+        left: -20px;
+      }
+    }
+
+    /* Print-friendly styles */
+    @media print {
+
+      .menu-btn,
+      .nav,
+      .social-icons,
+      .scroll-top-btn {
+        display: none !important;
+      }
+
+      body {
+        color: black;
+        background: white;
+      }
+
+      .about__bio-image {
+        height: auto !important;
+        background: none !important;
+      }
+
+      .about__bio {
+        background: none !important;
+        color: black;
+        border: none;
+      }
+
+      .jobs__job {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        background: none !important;
+        border: 1px solid #ddd;
+      }
+
+      .text-secondary {
+        color: #333 !important;
+      }
+
+      .skills-section {
+        background: none !important;
+        border: 1px solid #ddd;
+      }
+
+      .skill-tag {
+        background: #eee !important;
+        color: black !important;
+        border: 1px solid #ddd;
+      }
+    }
+
+    /* Animation for skill tags */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Add a subtle animation to the skill tags on page load */
+    .skills-grid .skill-tag {
+      animation: fadeIn 0.5s ease forwards;
+      opacity: 0;
+    }
+
+    .skills-grid .skill-tag:nth-child(1) {
+      animation-delay: 0.05s;
+    }
+
+    .skills-grid .skill-tag:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .skills-grid .skill-tag:nth-child(3) {
+      animation-delay: 0.15s;
+    }
+
+    .skills-grid .skill-tag:nth-child(4) {
+      animation-delay: 0.2s;
+    }
+
+    .skills-grid .skill-tag:nth-child(5) {
+      animation-delay: 0.25s;
+    }
+
+    .skills-grid .skill-tag:nth-child(6) {
+      animation-delay: 0.3s;
+    }
+
+    .skills-grid .skill-tag:nth-child(7) {
+      animation-delay: 0.35s;
+    }
+
+    .skills-grid .skill-tag:nth-child(8) {
+      animation-delay: 0.4s;
+    }
+
+    .skills-grid .skill-tag:nth-child(9) {
+      animation-delay: 0.45s;
+    }
+
+    .skills-grid .skill-tag:nth-child(10) {
+      animation-delay: 0.5s;
+    }
+
+    /* ... and so on for other tags */
   </style>
 </head>
 
@@ -117,6 +504,7 @@
       <div class="about__bio-image">
         <div class="about__bio">
           <h2 class="text-secondary">SOFTWARE ENGINEER</h2>
+          <p>Passionate about creating elegant solutions to complex problems</p>
         </div>
       </div>
       <div class="jobs">
@@ -129,108 +517,153 @@
 
         <div class="skills-section">
           <h3 class="text-secondary">Technical Skills</h3>
+
+          <div class="skill-categories">
+            <div class="skill-category active" data-category="all">All</div>
+            <div class="skill-category" data-category="frontend">Frontend</div>
+            <div class="skill-category" data-category="backend">Backend</div>
+            <div class="skill-category" data-category="database">Database</div>
+            <div class="skill-category" data-category="devops">DevOps</div>
+            <div class="skill-category" data-category="tools">Tools</div>
+          </div>
+
           <div class="skills-grid">
-            <div class="skill-tag">Java</div>
-            <div class="skill-tag">Spring Boot</div>
-            <div class="skill-tag">ReactJS</div>
-            <div class="skill-tag">JavaScript</div>
-            <div class="skill-tag">Typescript</div>
-            <div class="skill-tag">HTML5/CSS3</div>
-            <div class="skill-tag">VueJS</div>
-            <div class="skill-tag">Django</div>
-            <div class="skill-tag">MySQL</div>
-            <div class="skill-tag">SQL Server</div>
-            <div class="skill-tag">PostgreSQL</div>
-            <div class="skill-tag">MongoDB</div>
-            <div class="skill-tag">Git</div>
-            <div class="skill-tag">REST APIs</div>
-            <div class="skill-tag">JPA/Hibernate</div>
-            <div class="skill-tag">Bootstrap</div>
-            <div class="skill-tag">TailwindCSS</div>
-            <div class="skill-tag">Figma</div>
-            <div class="skill-tag">Jest</div>
-            <div class="skill-tag">Jasmine</div>
-            <div class="skill-tag">Selenium</div>
-            <div class="skill-tag">Docker</div>
-            <div class="skill-tag">Kubernetes</div>
-            <div class="skill-tag">AWS</div>
-            <div class="skill-tag">GitLab</div>
-            <div class="skill-tag">Jenkins</div>
-            <div class="skill-tag">CI/CD</div>
-            <div class="skill-tag">Agile/Scrum</div>
-            <div class="skill-tag">Kanban</div>
-            <div class="skill-tag">JIRA</div>
-            <div class="skill-tag">Thymeleaf</div>
-            <div class="skill-tag">JUnit</div>
-            <div class="skill-tag">Maven</div>
-            <div class="skill-tag">Gradle</div>
-            <div class="skill-tag">NPM</div>
-            <div class="skill-tag">Yarn</div>
-            <div class="skill-tag">Webpack</div>
-            <div class="skill-tag">Babel</div>
-            <div class="skill-tag">ESLint</div>
+            <div class="skill-tag" data-type="backend">Java</div>
+            <div class="skill-tag" data-type="backend">Spring Boot</div>
+            <div class="skill-tag" data-type="frontend">ReactJS</div>
+            <div class="skill-tag" data-type="frontend">JavaScript</div>
+            <div class="skill-tag" data-type="frontend">Typescript</div>
+            <div class="skill-tag" data-type="frontend">HTML5/CSS3</div>
+            <div class="skill-tag" data-type="frontend">VueJS</div>
+            <div class="skill-tag" data-type="backend">Django</div>
+            <div class="skill-tag" data-type="database">MySQL</div>
+            <div class="skill-tag" data-type="database">SQL Server</div>
+            <div class="skill-tag" data-type="database">PostgreSQL</div>
+            <div class="skill-tag" data-type="database">MongoDB</div>
+            <div class="skill-tag" data-type="tools">Git</div>
+            <div class="skill-tag" data-type="backend">REST APIs</div>
+            <div class="skill-tag" data-type="backend">JPA/Hibernate</div>
+            <div class="skill-tag" data-type="frontend">Bootstrap</div>
+            <div class="skill-tag" data-type="frontend">TailwindCSS</div>
+            <div class="skill-tag" data-type="tools">Figma</div>
+            <div class="skill-tag" data-type="tools">Jest</div>
+            <div class="skill-tag" data-type="tools">Jasmine</div>
+            <div class="skill-tag" data-type="tools">Selenium</div>
+            <div class="skill-tag" data-type="devops">Docker</div>
+            <div class="skill-tag" data-type="devops">Kubernetes</div>
+            <div class="skill-tag" data-type="devops">AWS</div>
+            <div class="skill-tag" data-type="devops">GitLab</div>
+            <div class="skill-tag" data-type="devops">Jenkins</div>
+            <div class="skill-tag" data-type="devops">CI/CD</div>
+            <div class="skill-tag" data-type="tools">Agile/Scrum</div>
+            <div class="skill-tag" data-type="tools">Kanban</div>
+            <div class="skill-tag" data-type="tools">JIRA</div>
+            <div class="skill-tag" data-type="frontend">Thymeleaf</div>
+            <div class="skill-tag" data-type="tools">JUnit</div>
+            <div class="skill-tag" data-type="tools">Maven</div>
+            <div class="skill-tag" data-type="tools">Gradle</div>
+            <div class="skill-tag" data-type="tools">NPM</div>
+            <div class="skill-tag" data-type="tools">Yarn</div>
+            <div class="skill-tag" data-type="tools">Webpack</div>
+            <div class="skill-tag" data-type="tools">Babel</div>
+            <div class="skill-tag" data-type="tools">ESLint</div>
           </div>
         </div>
+
+        <h3 class="text-secondary experience-header">Professional Experience</h3>
+
         <div class="jobs__job">
+          <div class="timeline-dot"></div>
           <h2 class="text-secondary">7/2024 - PRESENT</h2>
           <h3 class="job__company">Globant</h3>
           <h5 class="job__position">Software Engineer</h5>
           <p>Working on enterprise-level applications with modern technologies, focusing on scalable and maintainable
             solutions.</p>
+          <ul class="job-responsibilities">
+            <li>Developing and maintaining microservices using Spring Boot</li>
+            <li>Implementing frontend components with React and TypeScript</li>
+            <li>Collaborating with cross-functional teams to deliver high-quality software</li>
+          </ul>
           <img src="https://www.globant.com/themes/custom/globant_corp_theme/images/2019/globant-logo-dark.svg"
             alt="Globant Logo" />
         </div>
+
         <div class="jobs__job">
+          <div class="timeline-dot"></div>
           <h2 class="text-secondary">2022 – 7/2024</h2>
           <h3 class="job__company">FPT Software</h3>
           <h5 class="job__position">FullStack Developer</h5>
           <p>Developed and maintained web applications using Spring Boot and React, implementing RESTful APIs and
             responsive UI components.</p>
+          <ul class="job-responsibilities">
+            <li>Designed and implemented RESTful APIs using Spring Boot</li>
+            <li>Created responsive UI components with React and Redux</li>
+            <li>Optimized database queries and improved application performance</li>
+            <li>Participated in code reviews and mentored junior developers</li>
+          </ul>
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/FPT_logo_2010.svg/1200px-FPT_logo_2010.svg.png"
             alt="FPT Software Logo" />
         </div>
+
         <div class="jobs__job">
+          <div class="timeline-dot"></div>
           <h2 class="text-secondary">7/2021 – 12/2021</h2>
           <h3 class="job__company">Paradox Vietnam</h3>
           <h5 class="job__position">FullStack Developer</h5>
+          <ul class="job-responsibilities">
+            <li>Developed web applications using modern JavaScript frameworks</li>
+            <li>Implemented backend services with Node.js and Express</li>
+            <li>Collaborated with UX/UI designers to create intuitive user interfaces</li>
+          </ul>
           <img
             src="https://mms.businesswire.com/media/20200511005657/en/689439/5/Paradox-CompanyLogo-Web-PrimaryHorizontal-RGB-TwoColor.jpg?download=1"
             alt="Paradox Vietnam Logo" />
         </div>
-        <div class="jobs__job">
-          <h2 class="text-secondary">9/2019 – 9/2023</h2>
-          <h3 class="job__company">Danang University of Science and Technology</h3>
-          <h5 class="job__position">IT-er</h5>
-          <ul>
-            <li>Good self-management skills, highly organized and able to prioritize.</li>
-            <li>Excellent critical and breakthrough thinking.</li>
-            <li>Intermediate to advanced knowledge of web technologies and browsers.</li>
-            <li>Learned and practiced with project-based learning (PBLs).</li>
-            <li><strong>Projects:</strong>
-              <ul>
-                <li>Cinema Management Application (.NET) - UI/UX, Coding.</li>
-                <li>Big-size File-Uploading Dynamic Web (Java, HTML, CSS) - Backend Coding.</li>
-                <li>Smart Conveyor Belt (VueJs, Django) - Embedded coding, AI.</li>
-                <li>Orphanage Management (Angular, Django, Flutter) - Mobile coding, Frontend, and DevOps Supporter.
-                </li>
-                <li>Elearning Website (ReactJs, SpringBoot, MySQL) - FullStack Developer.</li>
-              </ul>
-            </li>
-          </ul>
-          <img src="https://pbs.twimg.com/profile_images/1329268753385758720/cz6FVX5B_400x400.jpg"
-            alt="Danang University Logo" />
+
+        <div class="education-section">
+          <div class="education-header">
+            <h3 class="text-secondary">Education</h3>
+          </div>
+
+          <div class="jobs__job">
+            <div class="timeline-dot"></div>
+            <h2 class="text-secondary">9/2019 – 9/2023</h2>
+            <h3 class="job__company">Danang University of Science and Technology</h3>
+            <h5 class="job__position">IT-er</h5>
+            <ul>
+              <li>Good self-management skills, highly organized and able to prioritize.</li>
+              <li>Excellent critical and breakthrough thinking.</li>
+              <li>Intermediate to advanced knowledge of web technologies and browsers.</li>
+              <li>Learned and practiced with project-based learning (PBLs).</li>
+              <li><strong>Projects:</strong>
+                <ul>
+                  <li>Cinema Management Application (.NET) - UI/UX, Coding.</li>
+                  <li>Big-size File-Uploading Dynamic Web (Java, HTML, CSS) - Backend Coding.</li>
+                  <li>Smart Conveyor Belt (VueJs, Django) - Embedded coding, AI.</li>
+                  <li>Orphanage Management (Angular, Django, Flutter) - Mobile coding, Frontend, and DevOps Supporter.
+                  </li>
+                  <li>Elearning Website (ReactJs, SpringBoot, MySQL) - FullStack Developer.</li>
+                </ul>
+              </li>
+            </ul>
+            <img src="https://pbs.twimg.com/profile_images/1329268753385758720/cz6FVX5B_400x400.jpg"
+              alt="Danang University Logo" />
+          </div>
+
+          <div class="jobs__job">
+            <div class="timeline-dot"></div>
+            <h2 class="text-secondary">5/2021 – 9/2022</h2>
+            <h3 class="job__company">BKIT13 - Java Web Developer Course</h3>
+            <h5 class="job__position">Trainee</h5>
+            <ul>
+              <li>Git, Java Core, Database (MySQL), JDBC, JPA, Hibernate.</li>
+              <li>HTML5, CSS3, JavaScript, Jquery, Bootstrap5.</li>
+              <li>Spring MVC, Spring Security, Spring Boot.</li>
+            </ul>
+          </div>
         </div>
-        <div class="jobs__job">
-          <h2 class="text-secondary">5/2021 – 9/2022</h2>
-          <h3 class="job__company">BKIT13 - Java Web Developer Course</h3>
-          <h5 class="job__position">Trainee</h5>
-          <ul>
-            <li>Git, Java Core, Database (MySQL), JDBC, JPA, Hibernate.</li>
-            <li>HTML5, CSS3, JavaScript, Jquery, Bootstrap5.</li>
-            <li>Spring MVC, Spring Security, Spring Boot.</li>
-          </ul>
-        </div>
+
         <div class="social-icons">
           <a href="https://twitter.com/TrnCngVit2" target="_blank" aria-label="Twitter">
             <i class="fab fa-twitter fa-2x"></i>
@@ -252,10 +685,10 @@
       </div>
     </section>
   </main>
+
   <script src="https://kit.fontawesome.com/231ad781b9.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/about.js"></script>
 </body>
-
-</html>
